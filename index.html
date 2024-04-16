@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueies.css">
+    
+    <title>Meu Portfólio: Frontend - UX </title>
+</head>
+<body>
+
+<!--Nav-Bar Principal-->
+    <nav id="dekstop-nav"> 
+        <div class="logo">Luiz Filipe</div> <!--div com a logo * posteriomente pode ser substituida por uma imagem-->
+        <div>
+            <ul class="nav-links"> <!--lista não ordena com as opções dos menu-->
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#experience">Habilidades</a></li> 
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+<!--Fim da Nav-Bar-->
+
+<!--Menu hamburger * úncia parte com JavaScript-->
+    <nav id="hamburger-nav">
+        <div class="logo">Luiz Filipe</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="tooglemenu()">
+                <span></span> <!--Linhas do menu-->
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="tooglemenu()">Sobre</a></li>
+                <li><a href="#experience" onclick="tooglemenu()">Habilidades</a></li> 
+                <li><a href="#projects" onclick="tooglemenu()">Projetos</a></li>
+                <li><a href="#contact" onclick="tooglemenu()">Contatos</a></li>
+            </div>
+      </div>
+    </nav>
+<!--Fim do Menu hamburger-->
+
+
+<!--Início Seção Perfil-->
+<section id="profile">
+    <div class="section__pic-container"> <!--div com a imagem-->
+        <img src="./assets/luiz-perfil.png" alt="John Doe profile picture">
+    </div> 
+
+    <div class="section__text"> <!--div com os textos/btn-->
+        <p class="section__text_p1">Olá, mundo! Eu  Sou</p>
+        <h1 class="title">Luiz Filipe</h1>
+        <p class="section__text__p2">Desenvolvedor Front-end</p>
+
+        <div class="btn-container"> <!--div com os botões-->
+            <button class="btn btn-color-2" onclick="window.open('./assets/currículo-Luiz-Filipe.pdf')">Download Currículo</button>
+    
+            <button class="btn btn-color-1" onclick="location.href='./#contact'">Contatos</button> <!--Envia para a seção de contato-->
+        </div>
+        <!--div para as redes sociais-->
+        <div id="socials-container">
+            <img src="./assets/linkedin.png" alt="My linkedln profile"
+             class="icon" onclick="openInNewTab('https://www.linkedin.com/in/luiz-miranda-236831202/')">
+
+             <!--openINewTab é uma função do js que está direcioando o link para uma nova aba -
+             window.open(url, '_blank') - que usa como parametro a url-->
+
+             <img src="./assets/github.png" alt="My Gith hub profile"
+             class="icon" onclick="openInNewTab('https://github.com/luizlmorim')">
+        </div>
+    </div>
+</section>
+<!--Fim da Seção Perfil-->
+
+<!--Incio Seção Sobre-->
+<section id="about">
+    <p class="section__text__p1">Além do código: Quem sou eu?</p>
+    <h1 class="title">Sobre Mim</h1>
+    <div class="section-container"><!--img, textos-->
+        <div class="section__pic-container">
+            <img src="./assets/luiz-perfil2.png" alt="Profile picture" class="about-pic" id="pic-none"> <!--img perfil-->
+        </div>
+        <!--detalhes sobre mim-->
+        <div class="about-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <img src="./assets/experience.png" alt="Experience icon" class="icon"> <!--icone certificado-->
+                    <h3>Cursos</h3>
+                    <br>
+                    <p>Desenvolvimento Web: Front-End<br>Desenvolvimento Back-end<br> </p>
+                </div>
+                <div class="details-container">
+                    <img src="./assets/education.png" 
+                    alt="Experience icon" 
+                    class="icon"> 
+                    <h3>Formação em Andamento</h3>
+                    <br>
+
+                    <p><strong>Faculdade Senac Pernambuco</strong> <br> Análise e Desenvolvimento de Sistemas</p>
+                </div>
+            </div>
+            <div class="text-container">
+                <p>
+                  Sou estudante da área de tecnologia, com foco em programação e design voltado para desenvolvimento web. Estou motivado a aprender e contribuir com meus conhecimentos e habilidades no mercado de trabalho. Acredito firmemente no impacto positivo que a tecnologia tem em nossa qualidade de vida. Meu foco é trabalhar em equipe, trazendo soluções criativas para desafios utilizando a tecnologia como ferramenta-chave.
+                </p>
+            </div>
+       </div>
+       <!--Icone da seta-->
+       <img src="./assets/arrow.png" 
+       alt="Arrow icon" 
+       class="icon arrow " 
+       onclick="location.href='./#experience'">
+</section>
+<!--Fim da Seção Sobre-->
+
+<!--Iníco Seção Experiencias -->
+<section id="experience">
+    <p class="section__text__p1">Minha caixinha de ferramentas</p>
+    <h1 class="title">Habilidades</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Hard Skills</h2>
+          <!--Artigo 1-->
+          <div class="article-container"> 
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>HTML</h3>
+                <p>Intermediário</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>CSS</h3>
+                <p>Intermediário</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Básico</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Figma</h3>
+                <p>Básico</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Git</h3>
+                <p>Básico</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>SQL</h3>
+                <p>Básico</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!--Fim do artigo 1-->
+
+        <!--Artigo 2-->
+        <div class="details-container"> 
+          <h2 class="experience-sub-title">Soft Skills</h2>
+          <div class="article-container">
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Criatividade</h3>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Comunicação</h3>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Adaptabilidade</h3>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/checkmark.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Trabalhar em Equipe</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!--Fim do artigo 2-->
+      </div>
+    </div>
+    <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='./#projects'"
+    />
+  </section>
+</section>
+<!--Fim da Seção Experiencias-->
+
+<!--Início Seção Projetos-->
+<section id="projects">
+    <p class="section__text__p1"></p>
+    <h1 class="title">Projetos</h1>
+
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <!--Projeto 1-->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="assets/projeto-1.png" 
+            alt=" project-1" class="project-img">
+        </div>
+        <h2 class="experience-sub-title project-title">Sistema de Cadastro</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="openInNewTab('https://github.com/luizlmorim/NLW-Unite')">
+            Giithub
+          </button>
+
+          <button class="btn btn-color-2 project-btn" onclick="openInNewTab('https://luizlmorim.github.io/NLW-Unite/')">
+            Live Demo
+          </button>
+        </div>
+      </div>
+
+      <!--Projeto 2-->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="assets/LP.png" 
+            alt=" project-1" class="project-img">
+        </div>
+        <h2 class="experience-sub-title project-title">Landing Page</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="openInNewTab('//github.com/luizlmorim/Eventos-Landing-Page')">
+            Giithub
+          </button>
+
+          <button class="btn btn-color-2 project-btn" onclick="openInNewTab('//recifegame.netlify.app/')">
+            Live Demo
+          </button>
+        </div>
+      </div>
+
+      <!--Projeto 3-->
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img src="assets/Captura de tela 2024-04-16 012741.png" 
+            alt=" project-1" class="project-img">
+        </div>
+        <h2 class="experience-sub-title project-title">Tela de Login</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="openInNewTab('https://www.figma.com/file/D5WV6WXr68aaLqTCFFdWGL/Forms?type=design&node-id=0-1&mode=design&t=tZvJ4PfHXk4VhzaR-0')">
+            Figma
+          </button>
+
+          <button class="btn btn-color-2 project-btn" onclick="openInNewTab('https://www.figma.com/proto/D5WV6WXr68aaLqTCFFdWGL/Forms?type=design&node-id=6-2&t=btCqZwJlyWBp03B0-0&scaling=min-zoom&page-id=0%3A1')">
+            Live Demo
+          </button>
+        </div>
+      </div>
+      </div>
+      <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='./#contact'"
+    />
+    </div>
+</section>
+<!--Fim Seção Projetos-->
+
+<!--Início Seção Contatos-->
+<section id="contact">
+  <p class="section__text__p1">Vamos conversar?</p>
+  <h1 class="title">Entre Contato</h1>
+  <p class="section__text__p1">Ficarei feliz em saber mais sobre você e como
+     podemos trabalhar juntos.</p>
+  <div class="contact-info-upper-container">
+    <!--Email-->
+    <div class="contact-info-container">
+      <img src="/assets/email.png" 
+      alt="Email icon"
+      class="icon contact-icon email-icon">
+      <p><a href="mailto:luizmiranda29e@gmail.com">luizmiranda29e@gmail.com</a></p>
+    </div>
+
+    <!--Whatsapp-->
+    <div class="contact-info-container">
+      <img src="/assets/Whatsapp.png" 
+      alt="Email icon"
+      class="icon contact-icon">
+      <p><a href="https://wa.me/5581985560401?text=Olá,%20Luiz!%20Tudo%20bem?%20Vi%20seu%20Portfólio." target="_blank">Whatsapp</a></p>
+    </div>
+    
+  </div>
+</section>
+<!--Fim Seção Contatos-->
+
+<!--Início Footer-->
+<footer>
+  <nav>
+    <div class="nav-links-container">
+      <ul class="nav-links"> 
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#experience">Habilidades</a></li> 
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contact">Contatos</a></li>
+    </ul>
+    </div>
+  </nav>
+  <p>Copyrigth &#169; 2024 Luiz Filipe. Todos os direitos reservados.</p>
+</footer>
+<!--Fim Footer-->
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
