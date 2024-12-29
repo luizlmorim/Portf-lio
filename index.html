@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cards.css">
+
     <link rel="stylesheet" href="mediaqueies.css">
     
     <title>Meu Portfólio: Frontend - UX </title>
 </head>
+
 <body>
 
 <!--Nav-Bar Principal-->
@@ -16,6 +19,7 @@
         <div>
             <ul class="nav-links"> <!--lista não ordena com as opções dos menu-->
                 <li><a href="#about">Sobre</a></li>
+                <li><a href="#professional">Experiência</a></li>
                 <li><a href="#experience">Habilidades</a></li> 
                 <li><a href="#projects">Projetos</a></li>
                 <li><a href="#contact">Contato</a></li>
@@ -35,6 +39,7 @@
             </div>
             <div class="menu-links">
                 <li><a href="#about" onclick="tooglemenu()">Sobre</a></li>
+                <li><a href="#professional" onclick="tooglemenu()">Experiência</a></li>
                 <li><a href="#experience" onclick="tooglemenu()">Habilidades</a></li> 
                 <li><a href="#projects" onclick="tooglemenu()">Projetos</a></li>
                 <li><a href="#contact" onclick="tooglemenu()">Contatos</a></li>
@@ -112,11 +117,50 @@
        <img src="./assets/arrow.png" 
        alt="Arrow icon" 
        class="icon arrow " 
-       onclick="location.href='./#experience'">
+       onclick="location.href='./#professional'">
 </section>
 <!--Fim da Seção Sobre-->
 
-<!--Iníco Seção Experiencias -->
+<!--Incio Seção Experiencia Profissional-->
+<section id="professional">
+    <p class="section__text__p1">Construindo soluções</p>
+    <h1 class="title">Experiência Profissional</h1>
+    <div class="section-container"><!--img, textos-->
+        
+
+        <!--detalhes sobre mim-->
+        <div class="about-details-container exp" >
+            <div class="about-containers">
+                <div class="details-container .caixa_centro">
+                    <img src="./assets/experience.png" alt="Experience icon" class="icon" style="height: 30px; width: 30px;"> <!--icone certificado-->
+                   <div>
+                    <h3>Wisecont Contabilidade Inteligente · Estágio ( 2024 )</h3>
+                    <h4>Desenvolvedor web front end</h4>
+                   </div>
+                   <br>
+                    <div>
+                      <p> - Criação de aplicações web com layouts dinâmicos</p>
+                      <br>
+                      <p> - Colaboração em equipe para entrega de soluções eficientes</p>
+                      <br>
+                      <p> - Onboarding direta com clientes para entendimento de necessidades e expectativas</p>
+                    </div>
+
+                </div>
+                <div class="section__pic-container">
+                  <img src="./assets/Memphis.png" alt="Profile picture" class="about-pic" id="pic-none"> <!--img perfil-->
+              </div>
+            </div>
+       </div>
+       <!--Icone da seta-->
+       <img src="./assets/arrow.png" 
+       alt="Arrow icon" 
+       class="icon arrow " 
+       onclick="location.href='./#experience'">
+</section>
+<!--Fim da Seção Experiencia Profissional-->
+
+<!--Iníco Seção Habilidades -->
 <section id="experience">
     <p class="section__text__p1">Minha caixinha de ferramentas</p>
     <h1 class="title">Habilidades</h1>
@@ -188,8 +232,8 @@
                 class="icon"
               />
               <div>
-                <h3>SQL</h3>
-                <p>Básico</p>
+                <h3>Design UX/UI</h3>
+                <p>Intermediário</p>
               </div>
             </article>
           </div>
@@ -253,17 +297,35 @@
     />
   </section>
 </section>
-<!--Fim da Seção Experiencias-->
+<!--Fim da Seção Habilidades-->
 
 <!--Início Seção Projetos-->
-<section id="projects">
-    <p class="section__text__p1"></p>
-    <h1 class="title">Projetos</h1>
-
-    <div class="experience-details-container">
+<!--<section id="projects">-->
+    <!-- <p class="section__text__p1"></p>
+    <h1 class="title">Projetos</h1> -->
+  <!--
+    <div>  
       <div class="about-containers">
-        <!--Projeto 1-->
-      <div class="details-container color-container">
+        
+      <div class="details-container color-container teste">
+        <div class="article-container">
+          <img src="assets/projeto-1.png" 
+            alt=" project-1" class="project-img">
+        </div>
+        <h2 class="experience-sub-title project-title">Sistema de Cadastro</h2>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="openInNewTab('https://github.com/luizlmorim/NLW-Unite')">
+            Giithub
+          </button>
+
+          <button class="btn btn-color-2 project-btn" onclick="openInNewTab('https://luizlmorim.github.io/NLW-Unite/')">
+            Live Demo
+          </button>
+        </div>
+      </div>
+    
+      
+      <div class="details-container color-container teste">
         <div class="article-container">
           <img src="assets/projeto-1.png" 
             alt=" project-1" class="project-img">
@@ -280,8 +342,8 @@
         </div>
       </div>
 
-      <!--Projeto 2-->
-      <div class="details-container color-container">
+      
+      <div class="details-container color-container teste">
         <div class="article-container">
           <img src="assets/LP.png" 
             alt=" project-1" class="project-img">
@@ -298,8 +360,8 @@
         </div>
       </div>
 
-      <!--Projeto 3-->
-      <div class="details-container color-container">
+     
+      <div class="details-container color-container teste">
         <div class="article-container">
           <img src="assets/Captura de tela 2024-04-16 012741.png" 
             alt=" project-1" class="project-img">
@@ -317,14 +379,82 @@
       </div>
       </div>
       <img
-      src="./assets/arrow.png"
-      alt="Arrow icon"
-      class="icon arrow"
-      onclick="location.href='./#contact'"
-    />
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
     </div>
-</section>
+ 
+  </section>
+ -->
 <!--Fim Seção Projetos-->
+
+<!--Projeto Teste Card-->
+<section id="projects">
+  <p class="section__text__p1">Conheça meus projetos</p>
+    <h1 class="title">Projetos</h1>
+
+  <div class="card-container" style="margin-top: 50px;">
+
+    <div class="card">
+      <img src="assets/projeto-1.png" alt=""/>
+      <div class="card-content">
+        <h3>Sistema de Cadastro</h3>
+        <div>
+          <a href="https://github.com/luizlmorim/NLW-Unite" target="_blank" class="btn_card">Giithub</a>
+          <a href="https://luizlmorim.github.io/NLW-Unite/" target="_blank" class="btn_card">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="assets/projeto-2.png" alt=""/>
+      <div class="card-content">
+        <h3>Landing Page</h3>
+        <div>
+          <a href="https://github.com/luizlmorim/Eventos-Landing-Page" target="_blank" class="btn_card">Giithub</a>
+          <a href="https://recifeegame.netlify.app/" target="_blank" class="btn_card">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="assets/projeto-3.png" alt=""/>
+      <div class="card-content">
+        <h3>Tela de Login</h3>
+        <div>
+          <a href="https://www.figma.com/file/D5WV6WXr68aaLqTCFFdWGL/Forms?type=design&node-id=0-1&mode=design&t=tZvJ4PfHXk4VhzaR-0" target="_blank" class="btn_card">Figma</a>
+          <a href="https://www.figma.com/proto/D5WV6WXr68aaLqTCFFdWGL/Forms?type=design&node-id=6-2&t=btCqZwJlyWBp03B0-0&scaling=min-zoom&page-id=0%3A1" target="_blank" class="btn_card">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="assets/projeto-4.png" alt=""/>
+      <div class="card-content">
+        <h3>LP de Viagens</h3>
+        <div>
+          <a href="https://www.figma.com/design/0133HfYR1zjkidk93wquoD/LP_viagens?node-id=0-1&p=f&t=AvYkjqYRE2iL02Dc-0"   target="_blank" class="btn_card">Figma</a>
+          <a href="https://www.figma.com/design/0133HfYR1zjkidk93wquoD/LP_viagens?node-id=0-1&p=f&t=AvYkjqYRE2iL02Dc-0" target="_blank" class="btn_card">Live Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+    />
+      
+  </div>
+
+</section>
+
+
+
+<!--Projeto Teste Card-->
 
 <!--Início Seção Contatos-->
 <section id="contact">

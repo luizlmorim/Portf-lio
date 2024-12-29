@@ -4,12 +4,14 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
-    margin: 0; 
     padding: 0;
+    margin: 0;
 } 
 
 body {
     font-family: 'Poppins', sans-serif; /*chamando a fonte*/
+    overflow-x: hidden; /* Impede o scroll horizontal */
+    margin: 0; /* Remove qualquer margem que possa causar deslocamento */
 }
 
 html {
@@ -273,6 +275,8 @@ section {
     margin-top: 2rem;
 }
 
+
+
 .about-details-container{
     justify-content: center;
     flex-direction: column;
@@ -282,6 +286,7 @@ section {
 .about-details-container {
     display: flex;
 }
+
 
 .about-pic {
     border-radius: 2rem; /*Deixa as bordas arredondadas*/ 
@@ -293,15 +298,30 @@ section {
     bottom: 2.5rem;
 }
 
+/*teste*/
+.teste {
+    
+}
+
+.caixa_centro {
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    justify-content: center;
+     align-items: center;
+}
+
 .details-container{
     padding: 1.5em;
     flex: 1; /* Distanciou mais a div - tipo um tab*/
-    background: white;
+    background: rgb(255, 255, 255);
     border-radius: 2rem;
     border: rgb(53,53,53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
     text-align: center;
 }
+
+
 
 .section-container{
     gap: 4rem;
@@ -329,8 +349,9 @@ section {
   
   .experience-details-container {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+    /*flex-direction: row;*/ /*column*/
   }
   
   .article-container {
