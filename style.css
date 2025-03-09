@@ -443,6 +443,12 @@ section {
 
 /* footer */
 
+footer {
+    height: 0;
+}
+
 footer p {
     text-align: center;
 }
+
+
